@@ -1,0 +1,169 @@
+/* 1. Reset default spacing and make sizing predictable */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Lato", "Segoe UI", Arial, sans-serif;
+    background: #f4f6fb;
+    color: #243047;
+    line-height: 1.6;
+}
+
+.container {
+    width: min(900px, 92%);
+    margin: 40px auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+header h1 {
+    margin-bottom: 4px;
+    color: #5145cd;
+    font-size: 2.4rem;
+}
+
+header p {
+    margin-top: 0;
+    color: #647089;
+}
+
+/* 2. Separate content into readable panels */
+.panel {
+    background: #ffffff;
+    padding: 24px;
+    margin-bottom: 24px;
+    border: 1px solid #e1e6f0;
+    border-radius: 14px;
+    box-shadow: 0 4px 14px rgba(36, 48, 71, 0.06);
+}
+
+h2 {
+    margin-top: 0;
+    font-size: 1.35rem;
+}
+
+/* 3. Form fields */
+label {
+    display: block;
+    margin: 14px 0 6px;
+    font-weight: 600;
+}
+
+input,
+textarea {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd3e1;
+    border-radius: 8px;
+    font: inherit;
+    background: #fff;
+}
+
+input:focus,
+textarea:focus {
+    outline: 2px solid #b8b1ff;
+    border-color: #5145cd;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* 4. Buttons */
+button {
+    margin-top: 16px;
+    padding: 11px 18px;
+    border: none;
+    border-radius: 8px;
+    background: #5145cd;
+    color: #fff;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+button:hover:not(:disabled) {
+    background: #3f35a8;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.delete-btn {
+    margin-top: 10px;
+    background: #c0394b;
+}
+
+.delete-btn:hover:not(:disabled) {
+    background: #992c3a;
+}
+
+/* 5. Status messages */
+#status {
+    padding: 12px;
+    border-radius: 8px;
+    background: #eef1f7;
+    color: #46516a;
+}
+
+#status.success {
+    background: #e3f7e9;
+    color: #176534;
+}
+
+#status.error {
+    background: #fde8e8;
+    color: #a3212c;
+}
+
+/* 6. Notes list */
+#notes-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.note-item {
+    padding: 18px;
+    margin-bottom: 14px;
+    border: 1px solid #e1e6f0;
+    border-radius: 10px;
+    overflow-wrap: anywhere;
+}
+
+.note-item h3 {
+    margin: 0 0 8px;
+    color: #343078;
+}
+
+.note-item p {
+    margin: 0;
+    white-space: pre-wrap;
+}
+
+.empty-state {
+    color: #647089;
+    padding: 16px 0;
+}
+
+@media (max-width: 600px) {
+    .container {
+        margin: 20px auto;
+    }
+
+    .panel {
+        padding: 18px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+}
